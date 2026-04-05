@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="CoreAbstraction/CoreAbstraction.csproj" Id="e0765838-8bc4-40ba-a2f2-53d6df9afd13" />
   <Project Path="CoreDomain/CoreDomain.csproj" />
+  <Project Path="Persistence/Persistence.csproj" Id="1776d3e2-f937-41b7-8cf6-34d8e54f4820" />
 </Solution>
