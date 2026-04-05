@@ -4,7 +4,7 @@ public class IndividualCustomer: Customer
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public string NationalIdendity { get; set; }
+    public string NationalIdentity { get; set; }
     public DateTime BirthDate { get; set; }
 
     public IndividualCustomer()
@@ -17,7 +17,7 @@ public class IndividualCustomer: Customer
         Id = id;
         FirstName = firstName;
         LastName = lastName;
-        NationalIdendity = nationalIdentity;
+        NationalIdentity = nationalIdentity;
         BirthDate = birthDate;
     }
 }

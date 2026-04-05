@@ -4,7 +4,11 @@ using Persistance.Contexts;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<CustomerDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("CustomerContextConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("CustomerContextConnection"),npgsql =>
+    {
+        npgsql.MigrationsAssembly(typeof(CustomerDbContext).FullName);
+    }).UseSnakeCaseNamingConvention()
+    );
 
 // Add services to the container.
 
