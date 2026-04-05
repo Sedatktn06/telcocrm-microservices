@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CustomerDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("CustomerContextConnection"),npgsql =>
     {
-        npgsql.MigrationsAssembly(typeof(CustomerDbContext).FullName);
+        npgsql.MigrationsAssembly(typeof(CustomerDbContext).Assembly.GetName().Name);
     }).UseSnakeCaseNamingConvention()
     );
 
