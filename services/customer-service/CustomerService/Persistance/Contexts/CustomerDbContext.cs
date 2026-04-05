@@ -1,9 +1,10 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Contexts;
 
 namespace Persistance.Contexts;
 
-public class CustomerDbContext:DbContext
+public class CustomerDbContext: EfDbContextBase
 {
     public CustomerDbContext(DbContextOptions<CustomerDbContext> options): base(options)
     {
