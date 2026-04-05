@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Persistance.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CustomerDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("CustomerContextConnection")));
 
 // Add services to the container.
 

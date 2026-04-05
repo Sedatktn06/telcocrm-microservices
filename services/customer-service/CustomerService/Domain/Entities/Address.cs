@@ -7,7 +7,6 @@ public class Address : BaseEntity<Guid>
 {
     public Guid CustomerId { get; set; }
     public AddressType AddressType { get; set; }
-    public AddressType AddressType2 { get; set; }
     public short DistrictId { get; set; }
     public string Street { get; set; }
     public string HouseNumber { get; set; }
